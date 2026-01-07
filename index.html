@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="nb">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StereoChat</title>
+    <script src="script.js" defer>  </script>
+</head>
+
+<body>
+
+    <body>
+        <h1>StereoChat</h1>
+
+        <form method="POST" action="https://chat.itmlab.no/api/post">
+            <label>
+                Brukernavn:
+                <input name="brukernavn" id="brukernavn">
+            </label>
+            <br />
+            <label>
+                Kommentar:
+                <input name="kommentar" id="kommentar">
+            </label>
+            <br />
+            <button type="submit">Send</button>
+        </form>
+
+        <hr />
+
+        <button id="loadBtn" type="button">Last inn kommentarer</button>
+
+        <ul id="liste"></ul>
+
+
+    </body>
+
+</html>
