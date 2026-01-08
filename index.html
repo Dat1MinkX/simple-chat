@@ -5,35 +5,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StereoChat</title>
-    <script src="script.js" defer>  </script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
 
-    <body>
+    <div id="onclick">
+        <h2></h2>
+        <p>.</p>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+    </div>
+
+
+    <header>
         <h1>StereoChat</h1>
+    </header>
+    <div class="wrapper">
+        <main>
+            <form method="POST" action="https://chat.itmlab.no/api/post">
+                <label>
+                    Brukernavn:
+                    <input name="brukernavn" id="brukernavn">
+                </label>
+                <br />
+                <label>
+                    Kommentar:
+                    <input name="kommentar" id="kommentar">
+                </label>
+                <br />
+                <button type="submit">Send</button>
+            </form>
 
-        <form method="POST" action="https://chat.itmlab.no/api/post">
-            <label>
-                Brukernavn:
-                <input name="brukernavn" id="brukernavn">
-            </label>
-            <br />
-            <label>
-                Kommentar:
-                <input name="kommentar" id="kommentar">
-            </label>
-            <br />
-            <button type="submit">Send</button>
-        </form>
+            <hr />
 
-        <hr />
-
-        <button id="loadBtn" type="button">Last inn kommentarer</button>
-
-        <ul id="liste"></ul>
-
-
-    </body>
+            <ul id="liste"></ul>
+        </main>
+    </div>
+</body>
 
 </html>
